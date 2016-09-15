@@ -1,0 +1,27 @@
+$BodyBlue: #001b2a;
+$green: #00FF00;
+$BorderWhite: #938f8f;
+$BodyBackColor: #000000;
+$Text1Color: #FFFFFF;
+
+body {
+	overflow-x: hidden;
+	overflow-y: hidden;
+	min-height: 800px;
+  background-color: $BodyBackColor;
+}
+
+#Message {
+  background-color: $green;
+  color: $Text1Color;
+}
+
+#LeftBar1 {
+	width: 60px;
+	height: 100vh;
+	background-color: $BodyBlue;
+	position: relative;
+	border: 1px solid $BorderWhite;
+	z-index: 50;
+	margin-top: 0px;
+}
