@@ -36,6 +36,10 @@ body {
 	position: absolute;
 	border: 1px solid $BorderWhite;
 	z-index: 30;
+	color: $Text1Color;
+		h1 {
+			margin-left: 100px;
+		}
 
 }
 #MenuBtn {
