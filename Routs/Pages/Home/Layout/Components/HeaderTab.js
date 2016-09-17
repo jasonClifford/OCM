@@ -5,7 +5,7 @@ export default class HeaderTab extends React.Component {
       return (
 
           <div id="MenuTab">
-
+            //code for the menu and logo +
 
           </div>
       );
