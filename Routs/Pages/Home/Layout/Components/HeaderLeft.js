@@ -1,6 +1,8 @@
 import React from 'react';
 import {Motion, spring} from 'react-motion';
 
+
+
 const HeaderLeft = React.createClass({
   getInitialState() {
     return {open: false};
@@ -19,13 +21,15 @@ const HeaderLeft = React.createClass({
     return (
       <div>
           <div id="MenuBar1">
-          <div id="MenuBtn"
-            onMouseDown={this.handleMouseDown}
-            onTouchStart={this.handleTouchStart}>
-          </div>
-        </div>
+            <div id="MenuBtn"
+              onMouseDown={this.handleMouseDown}
+              onTouchStart={this.handleTouchStart}>
+            </div>
 
-        <Motion style={{x: spring(this.state.open ? 410 : 0)}}>
+          </div>
+
+
+        <Motion style={{x: spring(this.state.open ? 360 : 0)}}>
           {({x}) =>
             // children is a callback which should accept the current value of
             // `style`
@@ -37,6 +41,7 @@ const HeaderLeft = React.createClass({
 
           }
         </Motion>
+        
       </div>
     );
   },

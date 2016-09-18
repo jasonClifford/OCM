@@ -1,5 +1,6 @@
 import React from "react";
 import HeaderLeft from "./Components/HeaderLeft.js";
+import Expose from "./Components/Expose.js";
 
 
 export default class Layout extends React.Component {
@@ -7,6 +8,7 @@ export default class Layout extends React.Component {
       return (
         <div>
           <HeaderLeft />
+          <Expose />
         </div>
       );
     }
