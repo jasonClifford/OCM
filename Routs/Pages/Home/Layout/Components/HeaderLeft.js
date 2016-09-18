@@ -1,28 +1,45 @@
-import React from "react";
+import React from 'react';
 import {Motion, spring} from 'react-motion';
-import Demo from "./Demo.js";
 
-export default class HeaderLeft extends React.Component {
-  _MenuOpen(){
-    alert("clicked");
-}
+const HeaderLeft = React.createClass({
+  getInitialState() {
+    return {open: false};
+  },
 
-    render(){
-      return (
-        <div>
+  handleMouseDown() {
+    this.setState({open: !this.state.open});
+  },
+
+  handleTouchStart(e) {
+    e.preventDefault();
+    this.handleMouseDown();
+  },
+
+  render() {
+    return (
+      <div>
           <div id="MenuBar1">
-
-            <div id="MenuBtn" onClick={this._MenuOpen.bind(this)}></div>
-
-         </div>
-         <div id="MenuTab">
-           <Motion defaultStyle={{x: 0}} style={{x: spring(300)}}>
-              {value => <h1>{value.x}</h1>}
-            </Motion>
-            <Demo />
-         </div>
-
+          <div id="MenuBtn"
+            onMouseDown={this.handleMouseDown}
+            onTouchStart={this.handleTouchStart}>
+          </div>
         </div>
-      );
-    }
-}
+
+        <Motion style={{x: spring(this.state.open ? 410 : 0)}}>
+          {({x}) =>
+            // children is a callback which should accept the current value of
+            // `style`
+
+              <div id="MenuTab" style={{
+                WebkitTransform: `translate3d(${x}px, 0, 0)`,
+                transform: `translate3d(${x}px, 0, 0)`,
+              }} />
+
+          }
+        </Motion>
+      </div>
+    );
+  },
+});
+
+export default HeaderLeft;

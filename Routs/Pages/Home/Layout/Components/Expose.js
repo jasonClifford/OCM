@@ -1,7 +1,7 @@
 import React from 'react';
 import {Motion, spring} from 'react-motion';
 
-const Demo = React.createClass({
+const HeaderLeft = React.createClass({
   getInitialState() {
     return {open: false};
   },
@@ -18,22 +18,23 @@ const Demo = React.createClass({
   render() {
     return (
       <div>
-        <button id="button"
-          onMouseDown={this.handleMouseDown}
-          onTouchStart={this.handleTouchStart}>
-          Toggle
-        </button>
+          <div id="MenuBar1">
+          <div id="MenuBtn"
+            onMouseDown={this.handleMouseDown}
+            onTouchStart={this.handleTouchStart}>
+          </div>
+        </div>
 
-        <Motion style={{x: spring(this.state.open ? 0 : 400)}}>
+        <Motion style={{x: spring(this.state.open ? 410 : 0)}}>
           {({x}) =>
             // children is a callback which should accept the current value of
             // `style`
-            <div className="demo0">
-              <div className="demo0-block" style={{
+
+              <div id="MenuTab" style={{
                 WebkitTransform: `translate3d(${x}px, 0, 0)`,
                 transform: `translate3d(${x}px, 0, 0)`,
               }} />
-            </div>
+
           }
         </Motion>
       </div>
@@ -41,4 +42,4 @@ const Demo = React.createClass({
   },
 });
 
-export default Demo;
+export default HeaderLeft;
