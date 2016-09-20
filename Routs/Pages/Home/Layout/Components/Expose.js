@@ -27,7 +27,7 @@ const Expose = React.createClass({
 
 
 
-        <Motion style={{x: spring(this.state.open ? 0 : -1900)}}>
+        <Motion style={{x: spring(this.state.open ? 0 : -2000)}}>
           {({x}) =>
             // children is a callback which should accept the current value of
             // `style`

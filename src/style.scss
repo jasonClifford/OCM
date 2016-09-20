@@ -8,7 +8,7 @@ body {
 	overflow-x: hidden;
 	overflow-y: hidden;
 	min-height: 800px;
-  background-color: $BodyBackColor;
+  background-color: $Text1Color;
 	margin-top: 0px;
 	margin-left: 0px;
 
@@ -35,7 +35,7 @@ body {
 	background-color: $BodyBlue;
 	position: absolute;
 	border: 1px solid $BorderWhite;
-	z-index: 30;
+	z-index: 35;
 	color: $Text1Color;
 	margin-left: -300px;
 
@@ -48,7 +48,9 @@ body {
 	z-index: 51;
 	position: relative;
 	margin-left: 5px;
-	margin-top: 50vh;
+	top: 50%;
+	margin-top: -25px;
+	cursor: pointer;
 
 }
 
@@ -58,7 +60,7 @@ body {
 	margin-left: 0px;
 	background-color: $Text1Color;
 	position: absolute;
-	z-index: 10;
+	z-index: 30;
 	display: block;
 	float: left;
 	clear: both;
@@ -80,6 +82,54 @@ body {
 	top: 100%;
 	margin-top: -90px;
 	margin-left: 6px;
+	cursor: pointer;
+}
+
+#MainContent {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 20;
+	background-color: #510909;
+	float: left;
+	margin-top: 0px;
+		#MoreInfo {
+			height: 50px;
+			width: 50px;
+			position: relative;
+			float: right;
+			background-color: $Text1Color;
+			top: 100%;
+			margin-right: 55px;
+			margin-top: -300px;
+			cursor: pointer;
+		}
+}
+#MortInfoTab {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 25;
+	background-color: #32e057;
+	float: left;
+	margin-top: 0px;
+		#LessInfo{
+			height: 50px;
+			width: 50px;
+			position: relative;
+			float: right;
+			background-color: $Text1Color;
+			cursor: pointer;
+			margin-right: 200px;
+
+		}
+
+}
 
 
+#H1{
+	top: 50%;
+	margin-right: auto;
+	background-color: $Text1Color;
+	z-index: 300;
 }
