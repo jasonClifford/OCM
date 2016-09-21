@@ -58,7 +58,7 @@ body {
 	width: 100%;
 	height: 130px;
 	margin-left: 0px;
-	background-color: $Text1Color;
+	background-color: $green;
 	position: absolute;
 	z-index: 30;
 	display: block;
@@ -132,4 +132,74 @@ body {
 	margin-right: auto;
 	background-color: $Text1Color;
 	z-index: 300;
+}
+#TwitterArea{
+	width: 55px;
+	height: 50px;
+	display: block;
+	margin-left: 135px;
+	position: absolute;
+	background-color: $BodyBackColor;
+
+	#Twitter {
+width: 55px;
+height: 49px;
+background-image: url('/images/TwitFLy.png');
+transition: background .8s steps(5);
+-webkit-transition: background .8s steps(5);
+-ms-transition: background .8s steps(5);
+-o-transition: background .8s steps(5);
+-moz-transition: background .8s steps(5);
+background-position: 0em;
+display: block;
+background-repeat: repeat-x;
+}
+
+#Twitter:hover {
+	 -webkit-animation: Twitter .8s steps(5) 1;
+	 -moz-animation: Twitter .8s steps(5) 1;
+		-ms-animation: Twitter .8s steps(5) 1;
+		 -o-animation: Twitter .8s steps(5) 1;
+				animation: Twitter .8s steps(5) 1;
+
+
+
+	background-position:-275px;
+
+}
+
+@-webkit-keyframes Twitter {
+0% { background-position:    0px 0; }
+ 100% { background-position: -275px 0; }
+}
+
+@-moz-keyframes Twitter {
+0% { background-position:    0px 0; }
+ 100%  { background-position: -275px 0; }
+}
+
+@-ms-keyframes Twitter {
+0%{ background-position:    0px 0; }
+100%  { background-position: -275px 0; }
+}
+
+@-o-keyframes Twitter {
+0% { background-position:    0px 0; }
+ 100%  { background-position: -275px 0; }
+}
+
+@keyframes Twitter {
+0% { background-position:    0px 0; }
+ 100%  { background-position: -275px 0; }
+}
+
+}
+
+#MoBox{
+	height: 80px;
+	width:  80px;
+	background-color: $green;
+	margin-left: 20px;
+	z-index: 100;
+
 }

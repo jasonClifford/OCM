@@ -37,11 +37,14 @@ const HeaderLeft = React.createClass({
               <div id="MenuTab" style={{
                 WebkitTransform: `translate3d(${x}px, 0, 0)`,
                 transform: `translate3d(${x}px, 0, 0)`,
-              }} />
+              }}>
+              <div id="MoBox"></div>
+
+            </div>
 
           }
         </Motion>
-        
+
       </div>
     );
   },

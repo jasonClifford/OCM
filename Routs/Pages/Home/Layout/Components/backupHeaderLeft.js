@@ -2,7 +2,8 @@ import React from 'react';
 import {Motion, spring} from 'react-motion';
 
 
-const Expose = React.createClass({
+
+const backupHeaderLeft = React.createClass({
   getInitialState() {
     return {open: false};
   },
@@ -19,28 +20,24 @@ const Expose = React.createClass({
   render() {
     return (
       <div>
-
-            <div id="ExpoBtn"
+          <div id="MenuBar1">
+            <div id="MenuBtn"
               onMouseDown={this.handleMouseDown}
               onTouchStart={this.handleTouchStart}>
             </div>
 
+          </div>
 
 
-        <Motion style={{x: spring(this.state.open ? 0 : -2000)}}>
+        <Motion style={{x: spring(this.state.open ? 360 : 0)}}>
           {({x}) =>
             // children is a callback which should accept the current value of
             // `style`
 
-              <div id="ExpoPane" style={{
+              <div id="MenuTab" style={{
                 WebkitTransform: `translate3d(${x}px, 0, 0)`,
                 transform: `translate3d(${x}px, 0, 0)`,
-              }}>
-              <div><h2>Hi there</h2></div>
-
-
-            </div>
-
+              }} />
 
           }
         </Motion>
@@ -50,4 +47,4 @@ const Expose = React.createClass({
   },
 });
 
-export default Expose;
+export default backupHeaderLeft;
