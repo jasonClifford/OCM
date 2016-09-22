@@ -38,8 +38,27 @@ const HeaderLeft = React.createClass({
                 WebkitTransform: `translate3d(${x}px, 0, 0)`,
                 transform: `translate3d(${x}px, 0, 0)`,
               }}>
-              <div id="MoBox"></div>
+              {/*///Begin Inner flyout tab/// */}
 
+                <div id="LogoMain">
+
+                  <img src="./images/FinalOCMLogoINC.svg" alt="Occipital Core Media Inc."></img>
+                  <h2> Design | Market </h2>
+                  <h2> Experiance</h2>
+                  <h3>"We love to create great design concepts and deliver them to the world."</h3>
+
+
+
+                </div>
+
+                <div id="TwitterArea">
+                <a id="Twitter" href="https://www.adobe.com"></a>
+                </div>
+
+
+
+
+                {/*///End Inner flyout tab/// */}
             </div>
 
           }
