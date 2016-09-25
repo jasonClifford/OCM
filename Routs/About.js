@@ -1,19 +1,13 @@
 import React from "react";
-import HeaderLeft from "./Pages/Home/Components/HeaderLeft.js";
-import Expose from "./Pages/Home/Components/Expose.js";
-import Content from "./Pages/Home/Components/Content.js";
-import Test from "./Pages/Home/Components/Test.js";
+import { Link } from "react-router";
 
-
-export default class Layout extends React.Component {
+export default class About extends React.Component {
     render(){
       return (
         <div>
+            <h1>this is About!!!!!!!!!!!!!!!!
+            Tri-tip prosciutto biltong shank landjaeger sausage picanha alcatra short ribs strip steak. Porchetta sirloin flank jowl andouille sausage bresaola prosciutto hamburger chicken. Bresaola cupim turducken pork belly tail pancetta chuck cow swine chicken turkey. Boudin pork salami shank corned beef tenderloin. Beef corned beef filet mignon t-bone pork loin, shoulder ground round landjaeger cow meatloaf andouille tri-tip.</h1>
 
-          <HeaderLeft />
-          <Expose />
-          <Content />
-          <Test />
         </div>
       );
     }

@@ -1,5 +1,6 @@
 import React from 'react';
 import {Motion, spring} from 'react-motion';
+import { Link } from 'react-router';
 
 
 
@@ -43,11 +44,18 @@ const HeaderLeft = React.createClass({
                 <div id="LogoMain">
 
                   <img src="./images/FinalOCMLogoINC.svg" alt="Occipital Core Media Inc."></img>
-                  <h2> Design | Market </h2>
-                  <h2> Experiance</h2>
+                  <h2> Design | Market Experience </h2>
+
                   <h3>"We love to create great design concepts and deliver them to the world."</h3>
+                </div>
+                <div id="NavArea">
+                  <nav>
+                	<ul id="NavAreaNav">
+                    <li><Link to="/">Home</Link></li>
+                  	<li><Link to="about">About</Link></li>
 
-
+                  </ul>
+                  </nav>
 
                 </div>
 

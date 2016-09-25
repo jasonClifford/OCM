@@ -74,7 +74,22 @@ body {
 			padding-left: 10px;
 			padding-right: 10px;
 		}
+		#NavArea {
+			position: relative;
+			width: 293px;
+			margin-left: 3px;
+			border: 1px double $BorderWhite;
+			margin-top: 1px;
+			height: 45%;
+			color: rgba(255,255,255,1.00);
+			font-family: Arial;
+			font-style: normal;
+			font-size: 15px;
+			text-align: center;
+			min-width: 0px;
 
+
+		}
 
 }
 #MenuBtn {
@@ -204,6 +219,13 @@ background-repeat: repeat-x;
 
 }
 
+#NavAreaNav li a {
+	text-decoration-style: none;
+	color: $Text1Color;
+
+	}
+
+////////////////////////////////////////////////////
 @-webkit-keyframes Twitter {
 0% { background-position:    0px 0; }
  100% { background-position: -275px 0; }
@@ -229,4 +251,12 @@ background-repeat: repeat-x;
  100%  { background-position: -275px 0; }
 }
 
+}
+#mainContainer {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	color: $Text1Color;
+	display: block;
+	background-color: $BodyBackColor;
 }

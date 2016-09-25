@@ -9,11 +9,8 @@ export default class Layout extends React.Component {
     render(){
       return (
         <div>
+            <h1> this is Bs2!!!!!!!!!!!!!!!!</h1>
 
-          <HeaderLeft />
-          <Expose />
-          <Content />
-          <Test />
         </div>
       );
     }

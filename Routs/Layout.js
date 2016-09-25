@@ -1,19 +1,25 @@
 import React from "react";
+import { Link } from "react-router";
+
 import HeaderLeft from "./Pages/Home/Components/HeaderLeft.js";
 import Expose from "./Pages/Home/Components/Expose.js";
-import Content from "./Pages/Home/Components/Content.js";
-import Test from "./Pages/Home/Components/Test.js";
-
 
 export default class Layout extends React.Component {
-    render(){
+    render() {
+      console.log(this.props.childern);
       return (
         <div>
+          <div>
+            <HeaderLeft />
+          </div>
+          <div>
+            <Expose />
+          </div>
 
-          <HeaderLeft />
-          <Expose />
-          <Content />
-          <Test />
+          <div id="mainContainer">
+            
+              {this.props.children}
+          </div>
         </div>
       );
     }
