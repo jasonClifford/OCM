@@ -1,4 +1,5 @@
 import React from "react";
+
 import ReactDOM from "react-dom";
 import {Router, Route, IndexRoute, hashHistory } from "react-router";
 require('./style.scss');
@@ -13,9 +14,9 @@ const app = document.getElementById('app');
 ReactDOM.render(
   <Router history={hashHistory}>
     <Route path="/" component={Layout}>
-      <IndexRoute component={Home}></IndexRoute>
-      <Route path="about" name="about" component={About}></Route>
-      
+      <IndexRoute component={Home} key={1}></IndexRoute>
+      <Route path="about" name="about" component={About} key={2}></Route>
+
     </Route>
 
 

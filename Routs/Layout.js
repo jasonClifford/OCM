@@ -1,12 +1,19 @@
 import React from "react";
 import { Link } from "react-router";
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+
 
 import HeaderLeft from "./Pages/Home/Components/HeaderLeft.js";
 import Expose from "./Pages/Home/Components/Expose.js";
 
-export default class Layout extends React.Component {
+
+
+const Layout = React.createClass({
+
     render() {
-      console.log(this.props.childern);
+      var path = this.props.location.pathname;
+      var segment = path.split('/')[1] || 'root';
+      console.log(segment);
       return (
         <div>
           <div>
@@ -16,11 +23,16 @@ export default class Layout extends React.Component {
             <Expose />
           </div>
 
-          <div id="mainContainer">
-            
-              {this.props.children}
+          <div className="mainContainer">
+            <ReactCSSTransitionGroup transitionName="pageSlider"
+            transitionEnterTimeout={600} transitionLeaveTimeout={600}>
+            {React.cloneElement(this.props.children, { key: segment })}
+            </ReactCSSTransitionGroup>
+
           </div>
         </div>
       );
-    }
-}
+    },
+});
+export default Layout;
+//////////////////////////////////////////////////////////////////
