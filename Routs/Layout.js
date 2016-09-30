@@ -12,8 +12,8 @@ const Layout = React.createClass({
 
     render() {
       var path = this.props.location.pathname;
-      var segment = path.split('/')[1] || 'root';
-      console.log(segment);
+      var segment = path.split("/")[1] ||"root";
+      console.log(path);
       return (
         <div>
           <div>
@@ -26,7 +26,7 @@ const Layout = React.createClass({
           <div className="mainContainer">
             <ReactCSSTransitionGroup transitionName="pageSlider"
             transitionEnterTimeout={600} transitionLeaveTimeout={600}>
-            {React.cloneElement(this.props.children, { key: segment })}
+            {React.cloneElement(this.props.children, { key: path })}
             </ReactCSSTransitionGroup>
 
           </div>
@@ -35,4 +35,3 @@ const Layout = React.createClass({
     },
 });
 export default Layout;
-//////////////////////////////////////////////////////////////////

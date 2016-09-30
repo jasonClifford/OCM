@@ -1,6 +1,6 @@
 import React from 'react';
 import {Motion, spring} from 'react-motion';
-import { Link } from 'react-router';
+import {browserHistory} from 'react-router';
 
 
 
@@ -16,6 +16,13 @@ const HeaderLeft = React.createClass({
   handleTouchStart(e) {
     e.preventDefault();
     this.handleMouseDown();
+  },
+  navaHome(){
+    browserHistory.push('/');
+    console.log(browserHistory);
+  },
+  navaAbout(){
+    browserHistory.push('about');
   },
 
   render() {
@@ -51,8 +58,8 @@ const HeaderLeft = React.createClass({
                 <div id="NavArea">
                   <nav>
                 	<ul id="NavAreaNav">
-                    <li><Link to="/">Home</Link></li>
-                  	<li><Link to="about">About</Link></li>
+                    <li><a onClick={this.navaHome} onMouseDown={this.handleMouseDown} onTouchStart={this.handleTouchStart}>Home</a></li>
+                    <li><a onClick={this.navaAbout} onMouseDown={this.handleMouseDown} onTouchStart={this.handleTouchStart}>About</a></li>
 
                   </ul>
                   </nav>

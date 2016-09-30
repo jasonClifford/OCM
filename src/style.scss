@@ -81,15 +81,24 @@ body {
 			border: 1px double $BorderWhite;
 			margin-top: 1px;
 			height: 45%;
-			color: rgba(255,255,255,1.00);
-			font-family: Arial;
-			font-style: normal;
-			font-size: 15px;
-			text-align: center;
-			min-width: 0px;
-
 
 		}
+
+}
+#NavAreaNav{
+	margin-top: 20px;
+	margin-left: -30px;
+	position: relative;
+	cursor: pointer;
+	list-style-type: none;
+	text-decoration: none;
+	color: $Text1Color;
+	font-size: 35px;
+	font-family: antic-didone;
+	font-style: normal;
+	font-weight: 400;
+	text-align: center;
+
 
 }
 #MenuBtn {
@@ -219,13 +228,13 @@ background-repeat: repeat-x;
 
 }
 
-#NavAreaNav li a {
-	text-decoration-style: none;
-	color: $Text1Color;
-
+#aboutContainer {
+		background-color: $green;
 	}
 
-////////////////////////////////////////////////////
+//////////////CSS Keyframe animations///////////////////
+
+
 @-webkit-keyframes Twitter {
 0% { background-position:    0px 0; }
  100% { background-position: -275px 0; }
@@ -252,18 +261,23 @@ background-repeat: repeat-x;
 }
 
 }
+
+///////////////////CSSTrasitionGroup/////////////////////
+
+
+
 .mainContainer {
 	position: absolute;
-	width: 100%;
+	width: 100% -15px;
 	height: 100%;
+	margin-left: 60px;
+	padding-left: 30px;
 	color: $Text1Color;
 	display: block;
 	background-color: $BodyBackColor;
 }
-///////////////////CSSTrasitionGroup/////////////////////
-
 .pageSlider-enter {
-  transform: translate3d(100%, 0, 0);
+  transform: translate3d(0, 200%, 0);
 }
 
 .pageSlider-enter.pageSlider-enter-active {
@@ -272,7 +286,8 @@ background-repeat: repeat-x;
 }
 
 .pageSlider-leave {
-  opacity: 0;
+	display: none;
+  transform: translate3d(0, 200%, 0);
 
 }
 
