@@ -1,98 +1,79 @@
 import React from "react";
 import {Motion, spring} from 'react-motion';
 
+const Test = React.createClass({
+  //set up a boolean flag to track the toggle state
+  getInitialState() {
+    return {compact: false};
+  },
 
+  hamburgerToggle() {
+    //toggle it
+    this.setState({compact: !this.state.compact});
+  },
 
-
-function SVGLineIcon(props) {
-  let wrapperStyle = {
-    cursor: 'pointer'
-  }
-
-  let innerStyle = {
-    fill: 'none',
-    stroke: 'currentColor',
-    strokeWidth: '3',
-    strokeLinecap: 'round',
-    strokeLinejoin: 'round'
-  }
-
-  return (
-    <svg style={wrapperStyle} height="50px" width="50px" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
-      <g style={innerStyle}>
-        {props.children}
-      </g>
-    </svg>
-  )
-}
-
-function ToggleButton(props) {
-  const TOTALLENGTH = 176.881
-  const CIRCLELENGTH = 135.696
-  const CHECKEDLENGTH = -41.185
-
-  let motionProps = {
-    defaultStyle: {
-      offset: -TOTALLENGTH
-    },
-    style: {
-      offset: props.active ?
-        spring(CIRCLELENGTH, {stiffness: 60, damping: 11}) :
-        spring(CHECKEDLENGTH, {stiffness: 120, damping: 13.8})
-    }
-  }
-
-  return (
-    <SVGLineIcon>
-      <Motion {...motionProps} >
-        { ({ offset }) =>
-          <path
-            style={{
-              strokeDasharray: `${TOTALLENGTH} ${TOTALLENGTH}`,
-              strokeDashoffset: offset
-            }}
-            d="M44.5,25H3.4C3.7,13.3,13.2,3.4,25,3.4C37,3.4,46.6,13,46.6,25S37,46.6,25,46.6C13.2,46.6,3.6,36.7,3.4,25"
-          />
-        }
-      </Motion>
-    </SVGLineIcon>
-  )
-}
-
-
-export default class Test extends React.Component {
-  constructor() {
-  super()
-  this.state = {
-    active: true
-  }
-}
-
-get style() {
-  return {
-    fontSize: '6em',
-    position: 'absolute'
-
-  }
-}
-
-handleToggle() {
-    this.setState({
-      active: !this.state.active
-    })
-  }
-  handleTouchStart(e) {
+  hamburgerTouchToggle(e) {
     e.preventDefault();
-    this.handleToggle();
-  }
+    this.handleMouseDown();
+  },
 
-render() {
-  return (
-    <span style={this.style}
-          onMouseDown={this.handleToggle.bind(this)}
-          onTouchStart={this.handleTouchStart.bind(this)}>
-          <ToggleButton active={this.state.active} />
-    </span>
-  )
-}
-}
+  render() {
+    return (
+      <div className="hamburgerBtn" onMouseDown={this.hamburgerToggle}
+            onTouchStart={this.hamburgerTouchToggle}>
+
+        {/* We're making the whole thing a motion component, we put our stuff to be animated in here */}
+        <Motion style={{
+            //designate all of the differences in interpolated values in these ternary operators
+            dash: spring(this.state.compact ? -41 : 160),
+            translateY: spring(this.state.compact ? 8 : 0),
+            translateX: spring(this.state.compact ? -8 : 0),
+            rotate: spring(this.state.compact ? 45 : 180)}}>
+
+            {/* make sure the values are passed below*/}
+            {({dash, rotate,translateY,translateX}) =>
+            <div>
+
+            <svg viewBox="0 0 50 50">
+            <title>Hamberger Button</title>
+
+
+            <polygon
+              style={{
+                  WebkitTransform: `rotate(${-rotate}deg) translateY( ${translateY}px)
+translateX( ${translateX}px)`,
+                  transform: `rotate(${-rotate}deg) translateY( ${translateY}px )
+translateX( ${translateX}px)`,
+
+              }}
+              className="cls-4" points="39.2 14 10.8 14"/>
+
+              <polygon
+              style={{
+                   WebkitTransform: `rotate(${rotate}deg) translateY( ${-translateY}px)
+translateX( ${translateX}px)`,
+                  transform: `rotate(${rotate}deg) translateY( ${-translateY}px )
+translateX( ${translateX}px)`,
+
+              }}
+              className="cls-4" points="39.2 36 10.8 36"/>
+
+            <g style={{
+                  strokeDashoffset: `${dash}`
+                }}
+              className="react-letters" data-name="react motion letters">
+              <path
+                className="cls-5"  d="M44.5,25H3.4C3.7,13.3,13.2,3.4,25,3.4C37,3.4,46.6,13,46.6,25S37,46.6,25,46.6C13.2,46.6,3.6,36.7,3.4,25"/>
+
+            </g>
+          </svg>
+          </div>
+
+          }
+        </Motion>
+      </div>
+    );
+  },
+});
+
+export default Test;

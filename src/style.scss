@@ -107,7 +107,6 @@ body {
 #MenuBtn {
 	width:50px;
 	height: 50px;
-	background-color: $Text1Color;
 	z-index: 51;
 	position: relative;
 	margin-left: 5px;
@@ -198,19 +197,6 @@ body {
 }
 /////////// Social Area /////////////////////////////////
 
-#testArea{
-	width: 50px;
-	height: 50px;
-	display: block;
-	margin-left: 15px;
-	position: absolute;
-	background-color: $Text1Color;
-	color: #2196F3;
-	span {
-		margin-top: -38px;
-	}
-
-}
 #TwitterArea{
 	width: 55px;
 	height: 50px;
@@ -382,3 +368,30 @@ background-repeat: repeat-x;
 
 	}
 		////////////////////////////////////////////////////////
+		////////// Hamberger Button  ///////////////////////////
+		svg {
+		  position: absolute;
+		  height: 50px;
+		  width: 50px;
+		  cursor: pointer;
+		}
+
+		.polygon,
+		polygon {
+		  transform-origin: 50% 50%;
+		}
+
+		.react-letters path {
+		  stroke-dasharray: 200;
+		}
+
+		.cls-5,
+		.cls-4{
+		  opacity: 1;
+		  fill: none;
+		  stroke-miterlimit: 10;
+		  stroke: $Text1Color;
+		  stroke-width: 3px;
+		  stroke-linecap: round ;
+		  stroke-linejoin: round ;
+		}
