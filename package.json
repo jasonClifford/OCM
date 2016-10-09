@@ -5,7 +5,7 @@
   "main": "App.js",
   "scripts": {
     "build": "webpack",
-    "start": "webpack-dev-server --hot --inline"
+    "start": "webpack-dev-server --hot --inline --history-api-fallback"
   },
   "author": "Jason Clifford",
   "license": "MIT",

@@ -2,6 +2,7 @@ import React from 'react';
 import {Motion, spring} from 'react-motion';
 import {browserHistory} from 'react-router';
 
+import Test from "./Test.js";
 
 
 const HeaderLeft = React.createClass({
@@ -21,9 +22,19 @@ const HeaderLeft = React.createClass({
     browserHistory.push('/');
     console.log(browserHistory);
   },
+  navaHomeTouch(e){
+    e.preventDefault();
+    this.navaHome();
+  },
   navaAbout(){
     browserHistory.push('about');
   },
+
+  navaAboutTouch(e){
+    e.preventDefault();
+    this.navaAbout();
+  },
+
 
   render() {
     return (
@@ -58,8 +69,14 @@ const HeaderLeft = React.createClass({
                 <div id="NavArea">
                   <nav>
                 	<ul id="NavAreaNav">
-                    <li><a onClick={this.navaHome} onMouseDown={this.handleMouseDown} onTouchStart={this.handleTouchStart}>Home</a></li>
-                    <li><a onClick={this.navaAbout} onMouseDown={this.handleMouseDown} onTouchStart={this.handleTouchStart}>About</a></li>
+                    <li><a
+                      onMouseDown={()=>{ this.navaHome(); this.handleMouseDown() }}
+                      onTouchStart={()=>{ this.navaHomeTouch(); this.handleTouchStart() }}
+                      >Home</a></li>
+                    <li><a
+                      onMouseDown={()=>{ this.navaAbout(); this.handleMouseDown() }}
+                      onTouchStart={()=>{ this.navaAboutTouch(); this.handleTouchStart() }}
+                      >About</a></li>
 
                   </ul>
                   </nav>
@@ -70,7 +87,10 @@ const HeaderLeft = React.createClass({
                 <a id="Twitter" href="https://www.adobe.com"></a>
                 </div>
 
+                <div id="testArea">
+                <Test />
 
+                </div>
 
 
                 {/*///End Inner flyout tab/// */}
