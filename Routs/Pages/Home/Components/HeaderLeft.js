@@ -44,7 +44,7 @@ hamburgerToggle() {
 
 hamburgerTouchToggle(e) {
   e.preventDefault();
-  this.handleMouseDown();
+  this.hamburgerToggle();
 },
 ///////////////////////Hamburger Fun End /////////////////////////
   render() {
@@ -53,9 +53,9 @@ hamburgerTouchToggle(e) {
           <div id="MenuBar1">
 
             <div id="MenuBtn"
-              onMouseDown={()=>{this.handleMouseDown(); this.hamburgerToggle() }}
+              onMouseDown={()=>{ this.handleMouseDown(); this.hamburgerToggle() }}
 
-              onTouchStart={()=>{this.hamburgerTouchToggle(); this.handleTouchStart() }}>
+              onTouchStart={()=>{ this.hamburgerTouchToggle; this.handleTouchStart }}>
 
 
               {/* We're making the whole thing a motion component, we put our stuff to be animated in here */}
@@ -136,11 +136,11 @@ hamburgerTouchToggle(e) {
                 	<ul id="NavAreaNav">
                     <li><a
                       onMouseDown={()=>{ this.navaHome(); this.handleMouseDown(); this.hamburgerToggle() }}
-                      onTouchStart={()=>{ this.navaHomeTouch(); this.handleTouchStart() }}
+                      onTouchStart={()=>{ this.navaHomeTouch; this.handleTouchStart }}
                       >Home</a></li>
                     <li><a
                       onMouseDown={()=>{ this.navaAbout(); this.handleMouseDown();this.hamburgerToggle() }}
-                      onTouchStart={()=>{ this.navaAboutTouch(); this.handleTouchStart() }}
+                      onTouchStart={()=>{ this.navaAboutTouch; this.handleTouchStart }}
                       >About</a></li>
 
                   </ul>
