@@ -23,6 +23,7 @@ const Expose = React.createClass({
             <div id="ExpoBtn"
               onMouseDown={this.handleMouseDown}
               onTouchStart={this.handleTouchStart}>
+              <img src="./images/BubbleLogo.gif" width="60" height="60" alt="Expose of Projects"/>
             </div>
 
 
