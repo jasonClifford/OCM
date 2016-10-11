@@ -3,8 +3,8 @@ import { Link } from "react-router";
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 
-import HeaderLeft from "./Pages/Home/Components/HeaderLeft.js";
-import Expose from "./Pages/Home/Components/Expose.js";
+import HeaderLeft from "./Pages/Layout/Components/HeaderLeft.js";
+import Expose from "./Pages/Layout/Components/Expose.js";
 
 
 

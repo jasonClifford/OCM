@@ -2,7 +2,7 @@ import React from 'react';
 import {Motion, spring} from 'react-motion';
 import {browserHistory} from 'react-router';
 
-import Test from "./Test.js";
+
 
 
 const HeaderLeft = React.createClass({
@@ -32,6 +32,14 @@ const HeaderLeft = React.createClass({
   },
 
   navaAboutTouch(e){
+    e.preventDefault();
+    this.navaAbout();
+  },
+  navaContact(){
+    browserHistory.push('contact');
+  },
+
+  navaContactTouch(e){
     e.preventDefault();
     this.navaAbout();
   },
@@ -87,9 +95,11 @@ hamburgerTouchToggle(e) {
                     <polygon
                     style={{
                          WebkitTransform: `rotate(${rotate}deg) translateY( ${-translateY}px)
-      translateX( ${translateX}px)`,
+                         translateX( ${translateX}px)`,
                         transform: `rotate(${rotate}deg) translateY( ${-translateY}px )
-      translateX( ${translateX}px)`,
+                        translateX( ${translateX}px)`,
+                        moztransform: `rotate(${rotate}deg) translateY( ${-translateY}px )
+                        translateX( ${translateX}px)`,
 
                     }}
                     className="cls-4" points="39.2 36 10.8 36"/>
@@ -142,6 +152,10 @@ hamburgerTouchToggle(e) {
                       onMouseDown={()=>{ this.navaAbout(); this.handleMouseDown();this.hamburgerToggle() }}
                       onTouchStart={()=>{ this.navaAboutTouch; this.handleTouchStart }}
                       >About</a></li>
+                    <li><a
+                      onMouseDown={()=>{ this.navaContact(); this.handleMouseDown();this.hamburgerToggle() }}
+                      onTouchStart={()=>{ this.navaContactTouch; this.handleTouchStart }}
+                      >Contact</a></li>
 
                   </ul>
                   </nav>

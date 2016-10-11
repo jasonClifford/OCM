@@ -79,8 +79,8 @@ body {
 		}
 		#NavArea {
 			position: relative;
-			width: 293px;
-			margin-left: 3px;
+			width: 294px;
+			margin-left: 2px;
 			border: 1px double $BorderWhite;
 			margin-top: 1px;
 			height: 45%;
@@ -132,9 +132,9 @@ body {
 
 }
 #ExpoBtn{
-	width: 50px;
-	height: 50px;
-	margin-left: 0px;
+	width: 49px;
+	height: 49px;
+	margin-left: 1px;
 	background-color: $Text1Color;
 	position: absolute;
 	z-index: 52;
@@ -350,7 +350,7 @@ background-repeat: repeat-x;
 
 }
 	////////////////////////////////////////////////////////
-	////////// Home Page  /////////////////////////////////
+	////////// About Page  /////////////////////////////////
 	.AboutMainWindow {
 			height: 1000px;
 			width: 100%;
@@ -367,6 +367,23 @@ background-repeat: repeat-x;
 
 	}
 		////////////////////////////////////////////////////////
+		////////// Contact Page  /////////////////////////////////
+		.ContactMainWindow {
+				height: 1000px;
+				width: 100%;
+				background-color: orange;
+				border: 1px solid $BorderWhite;
+				z-index: 19;
+
+				h1 {
+					color: $Text1Color;
+					padding-left: 20px;
+
+				}
+
+
+		}
+			////////////////////////////////////////////////////////
 		////////// Hamberger Button  ///////////////////////////
 		svg {
 		  position: absolute;
