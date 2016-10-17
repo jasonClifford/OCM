@@ -28,6 +28,12 @@ const AsideHome = React.createClass({
               onMouseDown={()=>{ this.handleMouseDown()}}
 
               onTouchStart={()=>{ this.handleTouchStart }}>
+
+              <div id="LearnMoreArrow">
+                Learn More
+                <div id="topArrow"></div>
+                <div id="btmArrow"></div>
+              </div>
             </div>
 
 
@@ -50,6 +56,20 @@ const AsideHome = React.createClass({
                 onMouseDown={()=>{ this.handleMouseDown()}}
 
                 onTouchStart={()=>{ this.handleTouchStart }}>
+
+                <svg version="1.1" id="Layer_1" viewBox="0 0 60 60">
+
+              <style type="text/css">
+              	{`.st0{fill:none;stroke:#ffffff;
+                  stroke-width:1.152;
+                  stroke-linecap:round;
+                  stroke-miterlimit:10;}`}
+              </style>
+              <circle className="st0" cx="30" cy="30" r="27.7"/>
+              <line className="st0" x1="11.9" y1="48.1" x2="48.1" y2="11.9"/>
+              <line className="st0" x1="11.9" y1="11.9" x2="48.1" y2="48.1"/>
+              </svg>
+
                 </div>
 
 

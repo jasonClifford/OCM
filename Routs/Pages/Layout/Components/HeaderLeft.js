@@ -72,10 +72,17 @@ hamburgerTouchToggle(e) {
                   dash: spring(this.state.compact ? -41 : 160),
                   translateY: spring(this.state.compact ? 8 : 0),
                   translateX: spring(this.state.compact ? -8 : 0),
+
+                  mozTranslateY: spring(this.state.compact ? 10 : 0),
+                  mozTranslateX: spring(this.state.compact ? -0 : 0),
+
+                  msTranslateY: spring(this.state.compact ? 10 : 0),
+                  msTranslateX: spring(this.state.compact ? -0 : 0),
+
                   rotate: spring(this.state.compact ? 45 : 180)}}>
 
                   {/* make sure the values are passed below*/}
-                  {({dash, rotate,translateY,translateX}) =>
+                  {({dash, rotate,translateY,translateX,mozTranslateY,mozTranslateX,msTranslateX,msTranslateY}) =>
                   <div>
 
                   <svg viewBox="0 0 50 50">
@@ -85,9 +92,13 @@ hamburgerTouchToggle(e) {
                   <polygon
                     style={{
                         WebkitTransform: `rotate(${-rotate}deg) translateY( ${translateY}px)
-      translateX( ${translateX}px)`,
+                        translateX( ${translateX}px)`,
                         transform: `rotate(${-rotate}deg) translateY( ${translateY}px )
-      translateX( ${translateX}px)`,
+                        translateX( ${translateX}px)`,
+                        MozTransform: `rotate(${-rotate}deg) translateY( ${mozTranslateY}px )
+                        translateX( ${mozTranslateX}px)`,
+                        MsTransform: `rotate(${-rotate}deg) translateY( ${mozTranslateY}px )
+                        translateX( ${mozTranslateX}px)`,
 
                     }}
                     className="cls-4" points="39.2 14 10.8 14"/>
@@ -98,8 +109,9 @@ hamburgerTouchToggle(e) {
                          translateX( ${translateX}px)`,
                         transform: `rotate(${rotate}deg) translateY( ${-translateY}px )
                         translateX( ${translateX}px)`,
-                        moztransform: `rotate(${rotate}deg) translateY( ${-translateY}px )
-                        translateX( ${translateX}px)`,
+                        MozTransform: `rotate(${rotate}deg) translateY( ${-mozTranslateY}px )
+                        translateX( ${mozTranslateX}px)`,
+
 
                     }}
                     className="cls-4" points="39.2 36 10.8 36"/>
