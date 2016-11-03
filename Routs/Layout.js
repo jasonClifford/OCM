@@ -25,7 +25,8 @@ const Layout = React.createClass({
 
           <div className="mainContainer">
             <ReactCSSTransitionGroup transitionName={segment === "root" ? "reversePageSwap" : "pageSwap"}
-            transitionEnterTimeout={600} transitionLeaveTimeout={600}>
+            transitionEnterTimeout={600}
+             transitionLeaveTimeout={600}>
             {React.cloneElement(this.props.children, { key: path })}
             </ReactCSSTransitionGroup>
 

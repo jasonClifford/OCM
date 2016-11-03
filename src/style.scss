@@ -292,7 +292,7 @@ background-repeat: repeat-x;
 
 .pageSwap-leave.pageSwap-leave-active {
 
-  transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, 100%, 0);
   transition: all ease-out 600ms;
 }
 
@@ -325,7 +325,7 @@ background-repeat: repeat-x;
 }
 
 .reversePageSwap-leave.reversePageSwap-leave-active {
-  transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, -100%, 0);
   transition: all ease-out 600ms;
 }
 
@@ -356,9 +356,47 @@ background-repeat: repeat-x;
 	background-color: yellow;
 	z-index: 1;
 
+}
+.HomeVid {
+	width: 100vw;
+	height: 100vh;
+	left: auto;
+	position: absolute;
 
 }
+.TouchSwipe{
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	background-color: black;
+	opacity: .5;
+	z-index: 3;
+}
+.TempTouchSwipeUp{
+	width: 100px;
+	height: 100px;
+	margin-left: 45%;
+	position: absolute;
+	background-color: orange;
+	z-index: 4;
+}
+.TempTouchSwipeUp:hover{
+	background-color: green;
+}
 
+.TempTouchSwipeDwn{
+	width: 100px;
+	height: 100px;
+	top: 80%;
+	margin-left: 45%;
+	position: absolute;
+	background-color: orange;
+	z-index: 4;
+
+}
+.TempTouchSwipeDwn:hover{
+	background-color: green;
+}
 ///AsideHome=>
 
 #HomeAsideBtn{
@@ -385,6 +423,7 @@ background-repeat: repeat-x;
 			font-weight: 400;
 			text-align: center;
 			position: relative;
+			z-index: 10;
 
 
 

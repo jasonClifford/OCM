@@ -21,7 +21,6 @@ const HeaderLeft = React.createClass({
   },
   navaHome(){
     browserHistory.push('/');
-    console.log(browserHistory);
   },
   navaHomeTouch(e){
     e.preventDefault();
