@@ -20,7 +20,7 @@ const HeaderLeft = React.createClass({
     this.handleMouseDown();
   },
   navaHome(){
-    browserHistory.push('/');
+    browserHistory.push('home');
   },
   navaHomeTouch(e){
     e.preventDefault();

@@ -30,7 +30,7 @@ const Home = React.createClass({
 
     render(){
       return (
-        <div className="HomeMainWindow">
+        <div className="mainContainer">
           <div className="TempTouchSwipeUp"></div>
           <div className="TempTouchSwipeDwn"></div>
           <div className="TouchSwipe"
@@ -47,6 +47,7 @@ const Home = React.createClass({
             <source src="./video/Ink.mp4" />
         </Video>
             <AsideHome />
+          
 
       </div>
       );
