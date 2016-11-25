@@ -72,8 +72,8 @@ hamburgerTouchToggle(e) {
                   translateY: spring(this.state.compact ? 8 : 0),
                   translateX: spring(this.state.compact ? -8 : 0),
 
-                  mozTranslateY: spring(this.state.compact ? 10 : 0),
-                  mozTranslateX: spring(this.state.compact ? -0 : 0),
+                  mozTranslateY: spring(this.state.compact ? 8 : 0),
+                  mozTranslateX: spring(this.state.compact ? -8 : 0),
 
                   msTranslateY: spring(this.state.compact ? 10 : 0),
                   msTranslateX: spring(this.state.compact ? -0 : 0),
@@ -84,36 +84,9 @@ hamburgerTouchToggle(e) {
                   {({dash, rotate,translateY,translateX,mozTranslateY,mozTranslateX,msTranslateX,msTranslateY}) =>
                   <div>
 
-                  <svg viewBox="0 0 50 50">
+                  <svg id="HambergerButton"viewBox="0 0 50 50">
                   <title>Hamberger Button</title>
 
-
-                  <polygon
-                    style={{
-                        WebkitTransform: `rotate(${-rotate}deg) translateY( ${translateY}px)
-                        translateX( ${translateX}px)`,
-                        transform: `rotate(${-rotate}deg) translateY( ${translateY}px )
-                        translateX( ${translateX}px)`,
-                        MozTransform: `rotate(${-rotate}deg) translateY( ${mozTranslateY}px )
-                        translateX( ${mozTranslateX}px)`,
-                        MsTransform: `rotate(${-rotate}deg) translateY( ${mozTranslateY}px )
-                        translateX( ${mozTranslateX}px)`,
-
-                    }}
-                    className="cls-4" points="39.2 14 10.8 14"/>
-
-                    <polygon
-                    style={{
-                         WebkitTransform: `rotate(${rotate}deg) translateY( ${-translateY}px)
-                         translateX( ${translateX}px)`,
-                        transform: `rotate(${rotate}deg) translateY( ${-translateY}px )
-                        translateX( ${translateX}px)`,
-                        MozTransform: `rotate(${rotate}deg) translateY( ${-mozTranslateY}px )
-                        translateX( ${mozTranslateX}px)`,
-
-
-                    }}
-                    className="cls-4" points="39.2 36 10.8 36"/>
 
                   <g style={{
                         strokeDashoffset: `${dash}`
@@ -124,7 +97,30 @@ hamburgerTouchToggle(e) {
 
                   </g>
                 </svg>
+
+                <div id="HamX1"style={{
+                    WebkitTransform: `rotate(${-rotate}deg) translateY( ${translateY}px)
+                    translateX( ${translateX}px)`,
+                    transform: `rotate(${-rotate}deg) translateY( ${translateY}px )
+                    translateX( ${translateX}px)`,
+                    MozTransform: `rotate(${-rotate}deg) translateY( ${mozTranslateY}px )
+                    translateX( ${mozTranslateX}px)`,
+                    MsTransform: `rotate(${-rotate}deg) translateY( ${mozTranslateY}px )
+                    translateX( ${mozTranslateX}px)`,
+
+                }}></div>
+              <div id="HamX2"style={{
+                   WebkitTransform: `rotate(${rotate}deg) translateY( ${-translateY}px)
+                   translateX( ${translateX}px)`,
+                  transform: `rotate(${rotate}deg) translateY( ${-translateY}px )
+                  translateX( ${translateX}px)`,
+                  MozTransform: `rotate(${rotate}deg) translateY( ${-mozTranslateY}px )
+                  translateX( ${mozTranslateX}px)`,
+
+
+              }}></div>
                 </div>
+
 
                 }
               </Motion>
@@ -147,7 +143,7 @@ hamburgerTouchToggle(e) {
 
                 <div id="LogoMain">
 
-                  <img src="./images/FinalOCMLogoINC.svg" alt="Occipital Core Media Inc."></img>
+                  <img id="LogoSVG" src="./images/FinalOCMLogoINC.svg" alt="Occipital Core Media Inc."></img>
                   <h2> Design | Market Experience </h2>
 
                   <h3>"We love to create great design concepts and deliver them to the world."</h3>

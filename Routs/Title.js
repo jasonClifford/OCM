@@ -34,9 +34,6 @@ const Title = React.createClass({
 
       return (
         <div className="TitleScreen">
-          <div>
-            <h1>{this.state.countItDown}</h1>
-          </div>
 
           <div id="Loader">
 
@@ -274,7 +271,7 @@ const Title = React.createClass({
             </svg>
           </div>
 
-          <div id="LoadingWord"> <h1>Loading...</h1>
+          <div id="LoadingWord"> <h1>Loading...{this.state.countItDown}%</h1>
           </div>
 
 
