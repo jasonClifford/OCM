@@ -20,39 +20,38 @@ const AsideHome = React.createClass({
     this.handleMouseDown();
   },
 
-  PageTitle(el){
+  ParaEnt(el){
     var PTitle = document.getElementById("PageTitle");
+    var Para2 = document.getElementById("Para2");
+    var Para3 = document.getElementById("Para3");
+    var Para4 = document.getElementById("Para4");
 
     PTitle.style.transition = "opacity 0.25s linear 1s, left 0.25s linear 1s";
+    Para2.style.transition = "opacity 0.25s linear 1.25s, left 0.25s linear 1.25s";
+    Para3.style.transition = "opacity 0.25s linear 1.5s, left 0.25s linear 1.5s";
+    Para4.style.transition = "opacity 0.25s linear 1.75s, left 0.25s linear 1.75s";
 
     PTitle.style.opacity = "1";
     PTitle.style.left="0px";
+    Para2.style.opacity = "1";
+    Para2.style.left="60px";
+    Para3.style.opacity = "1";
+    Para3.style.left="25px";
+    Para4.style.opacity = "1";
+    Para4.style.left="25px";
   },
 
-  Para2(el){
-      var Para2 = document.getElementById("Para2");
-      Para2.style.transition = "opacity 0.25s linear 1.25s, left 0.25s linear 1.25s";
+  HomePic(el){
+      var Hpic1 = document.getElementById("Pic1home");
+      var Hpic2 = document.getElementById("Pic2home");
+      var Hpic3 = document.getElementById("Pic3home");
+      Hpic1.style.transition = "opacity 2s linear 1.25s";
+      Hpic2.style.transition = "opacity 2s linear 1.5s";
+      Hpic3.style.transition = "opacity 2s linear 1.75s";
 
-      Para2.style.opacity = "1";
-      Para2.style.left="60px";
-
-  },
-
-  Para3(el){
-      var Para3 = document.getElementById("Para3");
-      Para3.style.transition = "opacity 0.25s linear 1.5s, left 0.25s linear 1.5s";
-
-      Para3.style.opacity = "1";
-      Para3.style.left="25px";
-
-  },
-  Para4(el){
-      var Para4 = document.getElementById("Para4");
-      Para4.style.transition = "opacity 0.25s linear 1.75s, left 0.25s linear 1.75s";
-
-      Para4.style.opacity = "1";
-      Para4.style.left="25px";
-
+      Hpic1.style.opacity = "1";
+      Hpic2.style.opacity = "1";
+      Hpic3.style.opacity = "1";
   },
 
   render() {
@@ -61,8 +60,7 @@ const AsideHome = React.createClass({
 
 
             <div id="HomeAsideBtn"
-              onMouseDown={()=>{ this.handleMouseDown(); this.PageTitle("PageTitle");this.Para2("Para2");
-              this.Para3("Para3");this.Para4("Para4")}}
+              onMouseDown={()=>{ this.handleMouseDown(); this.ParaEnt("PageTitle,Para2,Para3,Para4");  this.HomePic("Pic1home,Pic2home,Pic3home")}}
 
               onTouchStart={()=>{ this.handleTouchStart }}>
 
@@ -89,18 +87,21 @@ const AsideHome = React.createClass({
                 <div id="PageTitle">
                 <h1> Our Mission: </h1>
                 </div>
+                <div id="Pic1home" alt="Radix Norm Buisness cards"><img src="./images/Business-Card-MockUp.png"></img></div>
 
                   <svg id="MarkerO" viewBox="0 0 50 50">
                     <style>
-                	{`.st0{fill:none;stroke-miterlimit:10;}`}
+                	{`.st0{fill:none;stroke-miterlimit:10;stroke: #00ff00;}`}
                     </style>
                     <circle className="st0" cx="25" cy="25" r="18"/>
                   </svg>
 
+                  <div id="Pic2home" alt="Kerridge Website"><img src="./images/KerrBigWebSm.PNG"></img></div>
+
 
                   <svg id="MarkerO2" viewBox="0 0 50 50">
                     <style>
-                	{`.st0{fill:none;stroke-miterlimit:10;}`}
+                	{`.st0{fill:none;stroke-miterlimit:10; stroke: #00ff00;}`}
                     </style>
                     <circle className="st0" cx="25" cy="25" r="18"/>
                   </svg>
@@ -117,19 +118,21 @@ const AsideHome = React.createClass({
                     <circle className="st0" cx="25" cy="25" r="18"/>
                   </svg>
 
+                  <div id="Pic3home" alt="Kerridge Website"><img src="./images/QCApp.jpg"></img></div>
+
                   <div id="Para3">
                   <h2>Using traditional  and digital mixed media, we engage users on a personal level to create memorable experiences.</h2>
                   </div>
 
                   <svg id="MarkerO4" viewBox="0 0 50 50">
                     <style>
-                	{`.st0{fill:none;stroke-miterlimit:10;}`}
+                	{`.st0{fill:none;stroke-miterlimit:10;stroke: #00ff00;}`}
                     </style>
                     <circle className="st0" cx="25" cy="25" r="18"/>
                   </svg>
 
                   <div id="Para4">
-                  <h2>Occipital Core can create a range of custom software solutions that enhance productivity, streamline business workflows, and generate marketable customer feedback.
+                  <h2>We can create a range of custom software solutions that enhance productivity, streamline business workflows, and generate marketable customer feedback.
                   If you want to be seen in a bold new light by your customer base, Occipital Core Media can help.</h2>
                   </div>
 
@@ -142,14 +145,15 @@ const AsideHome = React.createClass({
                 <svg id="SVGclose"viewBox="0 0 60 60">
 
               <style type="text/css">
-              	{`.st0{fill:none;
+              	{`.ClosX{fill:none;
                   stroke-width:1.152;
                   stroke-linecap:round;
-                  stroke-miterlimit:10;}`}
+                  stroke-miterlimit:10;
+                  stroke: #FFFFFF;}`}
               </style>
-              <circle className="st0" cx="30" cy="30" r="27.7"/>
-              <line className="st0" x1="11.9" y1="48.1" x2="48.1" y2="11.9"/>
-              <line className="st0" x1="11.9" y1="11.9" x2="48.1" y2="48.1"/>
+              <circle className="ClosX" cx="30" cy="30" r="27.7"/>
+              <line className="ClosX" x1="11.9" y1="48.1" x2="48.1" y2="11.9"/>
+              <line className="ClosX" x1="11.9" y1="11.9" x2="48.1" y2="48.1"/>
               </svg>
 
                 </div>

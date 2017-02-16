@@ -11,8 +11,10 @@ import Expose from "./Pages/Layout/Components/Expose.js";
 const Layout = React.createClass({
 
     render() {
+      //set up logic in transitions here
       var path = this.props.location.pathname;
       console.log(path);
+    
 
       return (
         <div>
