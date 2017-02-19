@@ -2,8 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\build",
-    "\\Routs"
+    "\\Routs",
+    "\\Routs\\Pages",
+    "\\Routs\\Pages\\Home",
+    "\\Routs\\Pages\\Home\\Components",
+    "\\src"
   ],
-  "SelectedNode": "\\Routs\\About.js",
+  "SelectedNode": "\\Routs\\Pages\\Home\\Components\\Precip.js",
   "PreviewInSolutionExplorer": false
 }
