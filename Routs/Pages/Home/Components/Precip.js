@@ -25,7 +25,7 @@ export default class Precip extends React.Component {
 
     BtnOnOff() {
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        var DateApi = "http://ip-api.com/json";
+        var DateApi = "https://ipinfo.io?callback=?";
 
         $("#ip_content").html("Waiting...");
         $.getJSON(DateApi, {
@@ -58,20 +58,24 @@ export default class Precip extends React.Component {
 
 
                 /////////////////////////////////  Weather  ////////////////////////////////////////////////////////// 
+
+            
+
                 var Weather = "https://query.yahooapis.com/v1/public/yql?q=select * from weather.forecast " +
                     "where woeid in (select woeid from geo.places(1) where text='" + City + "," + Region + "') and u='c'&format=json";
 
                 $.getJSON(Weather, function (data) {
 
-                    const WTemp = data.query.results.channel.item.condition.temp;
-                    const Code = data.query.results.channel.item.condition.code;
-                    const WethLocalCity = data.query.results.channel.location.city;
-                    const WethLocalReg = data.query.results.channel.location.region;
-                    const SunRise = data.query.results.channel.astronomy.sunrise;
-                    const SunSet = data.query.results.channel.astronomy.sunset;
+                    var WTemp = data.query.results.channel.item.condition.temp;
+                    var Code = data.query.results.channel.item.condition.code;
+                    var WethLocalCity = data.query.results.channel.location.city;
+                   var WethLocalReg = data.query.results.channel.location.region;
+                   var SunRise = data.query.results.channel.astronomy.sunrise;
+                   var SunSet = data.query.results.channel.astronomy.sunset;
 
 
-                    //console.log(SunSet);
+                   console.log(WTemp);
+
                     $("#weather").html(WethLocalCity + " " + WethLocalReg + " temperature is: " + WTemp + "<br> Weather Code: " + Code + "<br> Sunrise was at: " + SunRise + "<br> Sunset will be at: " + SunSet);
                     //});
 

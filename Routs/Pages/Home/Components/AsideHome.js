@@ -149,7 +149,7 @@ const AsideHome = React.createClass({
                   stroke-width:1.152;
                   stroke-linecap:round;
                   stroke-miterlimit:10;
-                  stroke: #FFFFFF;}`}
+                  stroke: #fd9a2b;}`}
               </style>
               <circle className="ClosX" cx="30" cy="30" r="27.7"/>
               <line className="ClosX" x1="11.9" y1="48.1" x2="48.1" y2="11.9"/>
