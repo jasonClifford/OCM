@@ -37,7 +37,7 @@ export default class Precip extends React.Component {
 
                 // Sort through the crap to find city and state from the json //
                 //////////////////////////////////////////////////////////
-
+                var result = Location.results[1];//gets in to the Array
                 var city = "";
                 var state = "";
                 for (var i = 0, len = result.address_components.length; i < len; i++) {
@@ -49,7 +49,7 @@ export default class Precip extends React.Component {
 
 
         //////Weather In Date Api callback//////////////////////////
-                var Weather = "https://api.wunderground.com/api/bfed43d0b4e90d2f/conditions/q/CA/" + TownName + ".json";
+                var Weather = "https://api.wunderground.com/api/bfed43d0b4e90d2f/conditions/q/" + state + "/" + city + ".json"; 
 
                 // console.log(Weather);
 

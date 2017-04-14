@@ -476,6 +476,7 @@ background-repeat: repeat-x;
     display: block;
     width: 100vw;
     height: 100vh;
+    z-index:0;
 }
 
 /* The switch - the box around the slider */
@@ -621,7 +622,7 @@ input:checked + .slider:before {
 	background-color: $BodyBlue;
 	position: absolute;
 	border: 1px solid $BorderWhite;
-	z-index: 4;
+	z-index: 15;
 	color: $Text1Color;
 	float: right;
 	clear: right;
