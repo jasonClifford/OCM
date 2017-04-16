@@ -34,7 +34,6 @@ export default class Precip extends React.Component {
 
             $.getJSON(Local, function (Location) {
 
-
                 // Sort through the crap to find city and state from the json //
                 //////////////////////////////////////////////////////////
                 var result = Location.results[1];//gets in to the Array
@@ -45,11 +44,12 @@ export default class Precip extends React.Component {
                     if (ac.types.indexOf("locality") >= 0) city = ac.long_name;
                     if (ac.types.indexOf("administrative_area_level_1") >= 0) state = ac.long_name;
                 }
-    ///////////////////////////////////////////////////////////
+                ///////////////////////////////////////////////////////////
+                console.log(city);
+                console.log(state);
 
-
-        //////Weather In Date Api callback//////////////////////////
-                var Weather = "https://api.wunderground.com/api/bfed43d0b4e90d2f/conditions/q/" + state + "/" + city + ".json"; 
+                //////Weather In Date Api callback//////////////////////////
+                var Weather = "https://api.wunderground.com/api/bfed43d0b4e90d2f/conditions/q/" + state + "/" + city + ".json";
 
                 // console.log(Weather);
 
@@ -487,7 +487,7 @@ export default class Precip extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="precipPage">
 
                 <label id="Switch" >
                     <input id="ONOFF" type="checkbox" className={this.state.isActive ? 'inactive' : 'active'} onClick={this.toggleState}></input>

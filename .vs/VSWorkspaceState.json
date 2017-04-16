@@ -1,13 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\build",
     "\\Routs",
     "\\Routs\\Pages",
     "\\Routs\\Pages\\Home",
-    "\\Routs\\Pages\\Home\\Components",
-    "\\src"
+    "\\Routs\\Pages\\Home\\Components"
   ],
-  "SelectedNode": "\\Routs\\Pages\\Home\\Components\\Precip.js",
+  "SelectedNode": "\\webpack.config.js",
   "PreviewInSolutionExplorer": false
 }
