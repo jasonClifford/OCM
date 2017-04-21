@@ -10,4 +10,4 @@ app.get('*', (req, res) => {
 });
 
 app.listen(port);
-console.log('Server started on Port 8080');
+console.log('Server started on Port 8080 index.html, bundle.js along with all folders must be on the top level');
