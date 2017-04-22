@@ -1,11 +1,12 @@
 {
   "ExpandedNodes": [
     "",
+    "\\build",
     "\\Routs",
     "\\Routs\\Pages",
     "\\Routs\\Pages\\Home",
     "\\Routs\\Pages\\Home\\Components"
   ],
-  "SelectedNode": "\\server.js",
+  "SelectedNode": "\\Procfile",
   "PreviewInSolutionExplorer": false
 }
