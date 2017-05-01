@@ -4,9 +4,8 @@
     "\\Routs",
     "\\Routs\\Pages",
     "\\Routs\\Pages\\Home",
-    "\\Routs\\Pages\\Home\\Components",
-    "\\src"
+    "\\Routs\\Pages\\Home\\Components"
   ],
-  "SelectedNode": "\\Routs\\Layout.js",
+  "SelectedNode": "\\package.json",
   "PreviewInSolutionExplorer": false
 }
