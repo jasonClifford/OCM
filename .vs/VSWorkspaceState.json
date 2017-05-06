@@ -2,11 +2,7 @@
   "ExpandedNodes": [
     "",
     "\\build",
-    "\\Routs",
-    "\\Routs\\Pages",
-    "\\Routs\\Pages\\Home",
-    "\\Routs\\Pages\\Home\\Components",
-    "\\src"
+    "\\Routs"
   ],
   "SelectedNode": "\\Routs\\Home.js",
   "PreviewInSolutionExplorer": false
