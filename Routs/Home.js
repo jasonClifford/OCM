@@ -234,7 +234,7 @@ const Home = React.createClass({
           <AsideHome />
           <Video id="video1" autoPlay
               muted
-              playsinline                               //controls autoPlay loop muted
+              playsInline                               //controls autoPlay loop muted
               poster="https://sourceposter.jpg"
               ref="video1"
               onEnded={() => {
@@ -253,7 +253,7 @@ const Home = React.createClass({
 
           <Video id="video2" //controls autoPlay loop muted
               muted
-              playsinline
+              playsInline
               poster="https://sourceposter.jpg"
               ref="video2"
               onEnded={() => {
