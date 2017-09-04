@@ -4,9 +4,9 @@ module.exports = {
     entry: './src/App.js',
     output: {
       path: './',
-      filename: 'bundle.js'
+      filename: 'bundle.min.js'
     },
-    
+
     module: {
       loaders: [
         {
