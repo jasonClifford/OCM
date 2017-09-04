@@ -232,7 +232,8 @@ const Home = React.createClass({
           </Link>
           </div>
           <AsideHome />
-          <Video id="video1" autoPlay playsinline                               //controls autoPlay loop muted
+          <Video id="video1" autoPlay
+              playsinline                               //controls autoPlay loop muted
               poster="https://sourceposter.jpg"
               ref="video1"
               onEnded={() => {
@@ -250,6 +251,7 @@ const Home = React.createClass({
           </Video>
 
           <Video id="video2" //controls autoPlay loop muted
+              playsinline
               poster="https://sourceposter.jpg"
               ref="video2"
               onEnded={() => {
