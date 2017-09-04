@@ -232,7 +232,7 @@ const Home = React.createClass({
           </Link>
           </div>
           <AsideHome />
-          <Video id="video1" autoPlay video playsinline                               //controls autoPlay loop muted
+          <Video id="video1" autoPlay playsinline                               //controls autoPlay loop muted
               poster="https://sourceposter.jpg"
               ref="video1"
               onEnded={() => {
@@ -241,7 +241,7 @@ const Home = React.createClass({
                   //var VidTime = this.refs.video1.videoEl.playbackRate;
                   //console.log(VidTime);
                   document.getElementById('video1').style.display = "none";
-                  this.refs.video2.videoEl.playsinline();
+                  this.refs.video2.videoEl.play();
 
 
               }}>
@@ -257,7 +257,7 @@ const Home = React.createClass({
                   //this.refs.video2.videoEl.pause();
                   //var VidTime = this.refs.video1.videoEl.playbackRate;
                   //console.log(VidTime);
-                  this.refs.video2.videoEl.playsinline();
+                  this.refs.video2.videoEl.play();
 
 
               }}>
