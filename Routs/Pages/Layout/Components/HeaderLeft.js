@@ -38,7 +38,7 @@ const HeaderLeft = React.createClass({
           pathname: 'home',
           state: { message: Messanger }
       });
-      console.log(Messanger);
+      //console.log(Messanger);
   },
   navaHomeTouch(e){
     e.preventDefault();
@@ -64,7 +64,7 @@ const HeaderLeft = React.createClass({
           pathname: 'about',
           state: { message: Messanger }
       });
-      console.log(Messanger);
+      //console.log(Messanger);
   },
 
   navaAboutTouch(e){
@@ -90,7 +90,7 @@ const HeaderLeft = React.createClass({
           pathname: 'contact',
           state: { message: Messanger }
       });
-      console.log(Messanger);
+      //console.log(Messanger);
   },
 
   navaContactTouch(e){

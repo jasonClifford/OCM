@@ -54,7 +54,7 @@ export default class Layout extends React.Component {
             //set curent path to..
             var Curentpath = 3;
         }
-        console.log('Cur path is', Curentpath);
+        //console.log('Cur path is', Curentpath);
 
         ////Type of transition
         if (Curentpath < RwMessage) {
@@ -73,11 +73,11 @@ export default class Layout extends React.Component {
             var TypOfTrans = "fadeTransition";
 
         }
-        console.log('transition Type', TypOfTrans);
 
-
-        console.log('Came from', RwMessage);
-        //////this.props.location.state.message
+        //console.log('Path reads', path);
+        //console.log('transition Type', TypOfTrans);
+        //console.log('Came from', RwMessage);
+        
         ///////////////////////////////////////////////////////////////
         return (
 
@@ -91,9 +91,9 @@ export default class Layout extends React.Component {
           </div>
 
           <div className="mainContainer">
-              <ReactCSSTransitionGroup transitionName={path} 
+                    <ReactCSSTransitionGroup transitionName={TypOfTrans} 
           transitionEnterTimeout={600} transitionLeaveTimeout={600}>
-          {React.cloneElement(this.props.children, { key: path })}
+                        {React.cloneElement(this.props.children, { key: TypOfTrans })}
                 </ReactCSSTransitionGroup>
                   
           </div>
