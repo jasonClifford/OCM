@@ -19,23 +19,78 @@ const HeaderLeft = React.createClass({
     e.preventDefault();
     this.handleMouseDown();
   },
-  navaHome(){
-    browserHistory.push('home');
+  navaHome() {
+      var Messanger = window.location.pathname;
+      
+      if (Messanger === "/home") {
+          //set curent path to..
+          var Messanger = 1;
+      }
+      if (Messanger === "/about") {
+          //set curent path to..
+          var Messanger = 2;
+      }
+      if (Messanger === "/contact") {
+          //set curent path to..
+          var Messanger = 3;
+      }
+      browserHistory.push({
+          pathname: 'home',
+          state: { message: Messanger }
+      });
+      console.log(Messanger);
   },
   navaHomeTouch(e){
     e.preventDefault();
     this.navaHome();
   },
-  navaAbout(){
-    browserHistory.push('about');
+  navaAbout() {
+      var Messanger = window.location.pathname;
+
+      if (Messanger === "/home") {
+          //set curent path to..
+          var Messanger = 1;
+      }
+      if (Messanger === "/about") {
+          //set curent path to..
+          var Messanger = 2;
+      }
+      if (Messanger === "/contact") {
+          //set curent path to..
+          var Messanger = 3;
+      }
+      
+      browserHistory.push({
+          pathname: 'about',
+          state: { message: Messanger }
+      });
+      console.log(Messanger);
   },
 
   navaAboutTouch(e){
     e.preventDefault();
     this.navaAbout();
   },
-  navaContact(){
-    browserHistory.push('contact');
+  navaContact() {
+      var Messanger = window.location.pathname;
+
+      if (Messanger === "/home") {
+          //set curent path to..
+          var Messanger = 1;
+      }
+      if (Messanger === "/about") {
+          //set curent path to..
+          var Messanger = 2;
+      }
+      if (Messanger === "/contact") {
+          //set curent path to..
+          var Messanger = 3;
+      }
+      browserHistory.push({
+          pathname: 'contact',
+          state: { message: Messanger }
+      });
+      console.log(Messanger);
   },
 
   navaContactTouch(e){
@@ -53,9 +108,13 @@ hamburgerTouchToggle(e) {
   e.preventDefault();
   this.hamburgerToggle();
 },
+
+
 ///////////////////////Hamburger Fun End /////////////////////////
-  render() {
+render() {
+    
     return (
+        
       <div>
           <div id="MenuBar1">
 

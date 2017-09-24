@@ -12,7 +12,10 @@ const InkVid = 'https://s3.ca-central-1.amazonaws.com/ocmediavideo/Ink.mp4';
 
 const Home = React.createClass({
 
-    render(){
+
+    render() {
+
+ 
       return (
         <div className="mainContainer">
 
@@ -254,7 +257,6 @@ const Home = React.createClass({
           <Video id="video2" //controls autoPlay loop muted
               muted
               playsInline
-              poster="https://sourceposter.jpg"
               ref="video2"
               onEnded={() => {
                   // Do stuff

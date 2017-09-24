@@ -3,8 +3,12 @@
     "",
     "\\build",
     "\\Routs",
+    "\\Routs\\Pages",
+    "\\Routs\\Pages\\Home",
+    "\\Routs\\Pages\\Layout",
+    "\\Routs\\Pages\\Layout\\Components",
     "\\src"
   ],
-  "SelectedNode": "\\Routs\\Home.js",
+  "SelectedNode": "\\Routs\\Layout.js",
   "PreviewInSolutionExplorer": false
 }

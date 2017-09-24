@@ -6,7 +6,7 @@ export default class Precip extends React.Component {
 
     componentDidMount() {
 
-        this.BtnOnOff();
+        var receivedMessage = this.props.Location.state.message 
 
     }
     constructor() {
