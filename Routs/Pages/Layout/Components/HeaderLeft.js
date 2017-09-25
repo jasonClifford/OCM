@@ -210,10 +210,13 @@ render() {
                 <div id="NavArea">
                   <nav>
                 	<ul id="NavAreaNav">
-                    <li><a
+                     <li>
+                        <a
                       onMouseDown={()=>{ this.navaHome(); this.handleMouseDown(); this.hamburgerToggle() }}
                       onTouchStart={()=>{ this.navaHomeTouch; this.handleTouchStart }}
-                      >Home</a></li>
+                                    >Home
+                        </a>
+                    </li>
                     <li><a
                       onMouseDown={()=>{ this.navaAbout(); this.handleMouseDown();this.hamburgerToggle() }}
                       onTouchStart={()=>{ this.navaAboutTouch; this.handleTouchStart }}

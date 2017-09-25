@@ -74,9 +74,10 @@ export default class Layout extends React.Component {
 
         }
 
+        console.log('Cur path is', Curentpath);
         //console.log('Path reads', path);
         //console.log('transition Type', TypOfTrans);
-        //console.log('Came from', RwMessage);
+        console.log('Came from', RwMessage);
         
         ///////////////////////////////////////////////////////////////
         return (
