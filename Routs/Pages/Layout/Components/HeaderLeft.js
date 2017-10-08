@@ -22,6 +22,10 @@ const HeaderLeft = React.createClass({
   navaHome() {
       var Messanger = window.location.pathname;
       
+      if (Messanger === "/") {
+          //set curent path to..
+          var Messanger = 0;
+      }
       if (Messanger === "/home") {
           //set curent path to..
           var Messanger = 1;
@@ -47,6 +51,10 @@ const HeaderLeft = React.createClass({
   navaAbout() {
       var Messanger = window.location.pathname;
 
+      if (Messanger === "/") {
+          //set curent path to..
+          var Messanger = 0;
+      }
       if (Messanger === "/home") {
           //set curent path to..
           var Messanger = 1;
@@ -74,6 +82,10 @@ const HeaderLeft = React.createClass({
   navaContact() {
       var Messanger = window.location.pathname;
 
+      if (Messanger === "/") {
+          //set curent path to..
+          var Messanger = 0;
+      }
       if (Messanger === "/home") {
           //set curent path to..
           var Messanger = 1;

@@ -321,52 +321,67 @@ background-repeat: repeat-x;
 	opacity: 1;
 	background-color: $BodyBackColor;
 }
-
-.upTransition-leave {
-    transform: translate3d(0, 0, 0);
-}
-
-.upTransition-leave.upTransition-leave-active {
-    transform: translate3d(0, -100%, 0);
-    transition: all 600ms;
-}
-
-.upTransition-enter {
-    transform: translate3d(0, 0, 0);
-}
-
-.upTransition-enter.upTransition-enter-active {
-    transform: translate3d(0, 0, 0);
-    transition: all 600ms;
-}
-//////////
-
-
-
-.fadeTransition-enter {
-   opacity:0;
-   z-index:1;
-}
-
-.fadeTransition-enter.fadeTransition-enter-active {
+/////////home
+.home-leave {
     opacity: 1;
-    transition: all 600ms;
-}
-//////////
-.downTransition-leave {
-    transform: translate3d(0, 0, 0);
-}
-.downTransition-leave.downTransition-leave-active {
-    transform: translate3d(0, 100%, 0);
-    transition: all 600ms;
+    z-index: 1;
 }
 
-.downTransition-enter {
-    transform: translate3d(0, 0, 100%);
+.home-leave.home-leave-active {
+    opacity: 0;
+    z-index: 0;
 }
 
-.downTransition-enter.downTransition-enter-active {
-    transform: translate3d(0, 0, 0);
+.home-enter {
+    opacity: 0;
+    z-index: 0;
+}
+
+.home-enter.home-enter-active {
+    opacity: 1;
+    z-index: 1;
+    transition: all 600ms;
+}
+/////////about
+.about-leave {
+    opacity: 1;
+    z-index: 1;
+}
+
+.about-leave.about-leave-active {
+    opacity: 0;
+    z-index: 0;
+}
+
+.about-enter {
+    opacity: 0;
+    z-index: 0;
+}
+
+.about-enter.about-enter-active {
+    opacity: 1;
+    z-index: 1;
+    transition: all 600ms;
+}
+/////////contact
+.contact-leave {
+    opacity: 1;
+    z-index: 1;
+}
+
+.contact-leave.home-contact-active {
+    opacity: 0;
+    z-index: 0;
+}
+
+.contact-enter {
+    opacity: 0;
+    z-index: 0;
+}
+
+.contact-enter.contact-enter-active {
+    opacity: 1;
+    z-index: 1;
     transition: all 600ms;
 }
 

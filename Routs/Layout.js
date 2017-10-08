@@ -23,61 +23,8 @@ export default class Layout extends React.Component {
       //set up logic in transitions here
         var path = this.props.location.pathname;// not to mess with yet
 
-
-        //////////////////////////////////////////////////////////////
-        var RwMessage = this.props.location.state;
-        if (RwMessage !== null) {
-            //set curent path to..
-            var RwMessage = this.props.location.state.message;
-        }
-        if (RwMessage === null) {
-            //set curent path to..
-            var RwMessage = 0;
-        }
-
-        
-        //////////////////////////////////////////////////////////////
-
-
-        var Curentpath = this.props.location.pathname;
-        if (Curentpath === "home") {
-            //set curent path to..
-            var Curentpath = 1;    
-        }
-
-        if (Curentpath === "about") {
-            //set curent path to..
-            var Curentpath = 2;
-        }
-
-        if (Curentpath === "contact") {
-            //set curent path to..
-            var Curentpath = 3;
-        }
-        //console.log('Cur path is', Curentpath);
-
-        ////Type of transition
-        if (Curentpath < RwMessage) {
-            var TypOfTrans = "upTransition";
-
-        }
-        if (Curentpath > RwMessage) {
-            var TypOfTrans = "downTransition";
-
-        }
-        if (Curentpath === RwMessage) {
-            var TypOfTrans = "fadeTransition";
-
-        }
-        if (TypOfTrans === undefined){
-            var TypOfTrans = "fadeTransition";
-
-        }
-
-        console.log('Cur path is', Curentpath);
-        //console.log('Path reads', path);
-        //console.log('transition Type', TypOfTrans);
-        console.log('Came from', RwMessage);
+       
+       // console.log('Path reads', path);
         
         ///////////////////////////////////////////////////////////////
         return (
@@ -92,9 +39,9 @@ export default class Layout extends React.Component {
           </div>
 
           <div className="mainContainer">
-                    <ReactCSSTransitionGroup transitionName={TypOfTrans} 
+                    <ReactCSSTransitionGroup transitionName={path} 
           transitionEnterTimeout={600} transitionLeaveTimeout={600}>
-                        {React.cloneElement(this.props.children, { key: TypOfTrans })}
+                        {React.cloneElement(this.props.children, { key: path })}
                 </ReactCSSTransitionGroup>
                   
           </div>

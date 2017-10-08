@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router";
 import {browserHistory} from 'react-router';
 
 
@@ -16,8 +15,29 @@ const Title = React.createClass({
     if (this.state.countItDown <= 0) {
       clearInterval(this.interval);
     }
-    if (this.state.countItDown === 0){
-      browserHistory.push('home');
+    if (this.state.countItDown === 0) {
+
+        var Messanger = window.location.pathname;
+        if (Messanger === "/") {
+            //set curent path to..
+            var Messanger = 0;
+        }
+        if (Messanger === "/home") {
+            //set curent path to..
+            var Messanger = 1;
+        }
+        if (Messanger === "/about") {
+            //set curent path to..
+            var Messanger = 2;
+        }
+        if (Messanger === "/contact") {
+            //set curent path to..
+            var Messanger = 3;
+        }
+        browserHistory.push({
+            pathname: 'home',
+            state: { message: Messanger }
+        });
     }
   },
   componentDidMount() {
