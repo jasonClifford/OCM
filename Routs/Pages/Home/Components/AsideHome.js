@@ -82,10 +82,13 @@ const AsideHome = React.createClass({
                 WebkitTransform: `translate3d(${x}px, 0, 0)`,
                 transform: `translate3d(${x}px, 0, 0)`,
               }}>
-              {/*///Begin Inner flyout tab/// */}
+                        {/*///Begin Inner flyout tab/// */}
+                  <div id="HomeAsidePaneWraper">
+
+
 
                 <div id="PageTitle">
-                <h1> Our Mission: </h1>
+                <h1> Our Missionnnn: </h1>
                 </div>
                 <div id="Pic1home" alt="Radix Norm Buisness cards"><img src="./images/Business-Card-MockUp.png"></img></div>
 
@@ -160,7 +163,7 @@ const AsideHome = React.createClass({
 
 
 
-
+                  </div>{/*///End wrapper/// */}
                 {/*///End Inner flyout tab/// */}
               </div>
 

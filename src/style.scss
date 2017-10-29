@@ -313,13 +313,13 @@ background-repeat: repeat-x;
 
 
 .mainContainer {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	margin-left: 30px;
-	display: block;
-	opacity: 1;
-	background-color: $BodyBackColor;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin-left: 30px;
+    display: block;
+    opacity: 1;
+    background-color: $BodyBackColor;
 }
 /////////home
 .home-leave {
@@ -629,155 +629,166 @@ input:checked + .slider:before {
 
 }
 #HomeAsidePane {
-	width: 100vw;
-	height: 100vh;
-	background-color: $BodyBlue;
-	position: absolute;
-	border: 1px solid $BorderWhite;
-	z-index: 15;
-	color: $Text1Color;
-	float: right;
-	clear: right;
+    width: 100vw;
+    height: 100vh;
+    background-color: $BodyBlue;
+    position: absolute;
+    border: 1px solid $BorderWhite;
+    z-index: 15;
+    color: $Text1Color;
+    float: right;
+    clear: right;
 
-	#PageTitle{
-		height: 100px;
-		width:  225px;
-		margin-top: 5vh;
-		margin-left: 0vw;
-		position: absolute;
-		top: -15px;
-		left: 40px;
-		opacity: 0;
+    #HomeAsidePaneWraper {
+        margin-right: 500px;
+        padding-right: 50%;
+        float: left;
+        width: 90%;
+        height: 100%;
+        overflow-x: hidden;
+        user-select: none;
+        background-color:green;
 
-	}
-	#MarkerO{
-		position: absolute;
-		margin-left: 0vw;
-		left: 200px;
-		top: 5;
-		margin-top: 5vh;
-		height: 50px;
-		width: 50px;
 
-	}
-	#MarkerO2{
-		position: absolute;
-		margin-left: 50vw;
-		top: 5px;
-		margin-top: 20vh;
-		height: 50px;
-		width: 50px;
 
-	}
-	#MarkerO3{
-		position: absolute;
-		margin-left: 41vw;
-		top: 5px;
-		margin-top: 50vh;
-		height: 50px;
-		width: 50px;
+        #PageTitle {
+            height: 100px;
+            width: 225px;
+            margin-top: 5vh;
+            margin-left: 0vw;
+            position: absolute;
+            top: -15px;
+            left: 40px;
+            opacity: 0;
+            background-color:gray; 
+        }
 
-	}
-	#MarkerO4{
-		position: absolute;
-		margin-left: 48vw;
-		stroke: $OCMgreen;
-		top: 5px;
-		margin-top: 80vh;
-		height: 50px;
-		width: 50px;
+        #MarkerO {
+            position: absolute;
+            margin-left: 0vw;
+            left: 200px;
+            top: 5;
+            margin-top: 5vh;
+            height: 50px;
+            width: 50px;
+        }
 
-	}
-	#Para2{
-		height: 150px;
-		width:  35%;
-		margin-top: 20vh;
-		position: absolute;
-		top: 0px;
-		right: 10px;
-		margin-left: 50vw;
-		left: 62px;
-		opacity: 0;
-	}
+        #MarkerO2 {
+            position: absolute;
+            margin-left: 50vw;
+            top: 5px;
+            margin-top: 20vh;
+            height: 50px;
+            width: 50px;
+        }
 
-	#Para3{
+        #MarkerO3 {
+            position: absolute;
+            margin-left: 41vw;
+            top: 5px;
+            margin-top: 50vh;
+            height: 50px;
+            width: 50px;
+        }
 
-		height: 100px;
-		width:  40%;
-		margin-top: 50vh;
-		position: absolute;
-		right: 10px;
-		left: 100px;
-		opacity: 0;
+        #MarkerO4 {
+            position: absolute;
+            margin-left: 48vw;
+            stroke: $OCMgreen;
+            top: 5px;
+            margin-top: 80vh;
+            height: 50px;
+            width: 50px;
+        }
 
-	}
-	#Para4{
-		height: 150px;
-		width:  40%;
-		margin-top: 80vh;
-		position: absolute;
-		top: 0px;
-		margin-left: 50vw;
-		left: 62px;
-		opacity: 0;
+        #Para2 {
+            height: 150px;
+            width: 35%;
+            margin-top: 20vh;
+            position: absolute;
+            top: 0px;
+            right: 10px;
+            margin-left: 50vw;
+            left: 62px;
+            opacity: 0;
+        }
 
-	}
+        #Para3 {
+            height: 100px;
+            width: 40%;
+            margin-top: 50vh;
+            position: absolute;
+            right: 10px;
+            left: 100px;
+            opacity: 0;
+        }
 
-	#Pic1home{
-		border: 1px solid $BorderWhite;
-		top: 10vh;
-		width: 38%;
-		height: 380px;
-		left: 20px;
-		opacity: 0;
-		overflow: hidden;
-		position: absolute;
-	}
-	#Pic2home{
-		border: 1px solid $BorderWhite;
-		top: 37vh;
-		margin-left: 52%;
-		width: 34%;
-		height: 330px;
-		left: 20px;
-		opacity: 0;
-		overflow: hidden;
-		position: absolute;
-	}
+        #Para4 {
+            height: 150px;
+            width: 40%;
+            margin-top: 80vh;
+            position: absolute;
+            top: 0px;
+            margin-left: 50vw;
+            left: 62px;
+            opacity: 0;
+        }
 
-	#Pic3home{
-		border: 1px solid $BorderWhite;
-		top: 60vh;
-		width: 34%;
-		height: 330px;
-		left: 20px;
-		opacity: 0;
-		overflow: hidden;
-		position: absolute;
-	}
+        #Pic1home {
+            border: 1px solid $BorderWhite;
+            top: 10vh;
+            width: 38%;
+            height: 380px;
+            left: 20px;
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+        }
 
-	#CloseBtn{
-		width:50px;
-		height: 50px;
-		margin-top: 5vh;
-		left: 85vw;
-		z-index: 3;
-		stroke:$Text1Color;
-		position: absolute;
-		margin-left: 5px;
-		cursor: pointer;
-		-moz-transition: linear 0.3s;
-		-ms-transition: linear 0.3s;
-		-o-transition: linear 0.3s;
-		-webkit-transition: linear 0.3s;
-		transition: linear 0.3s;
+        #Pic2home {
+            border: 1px solid $BorderWhite;
+            top: 37vh;
+            margin-left: 52%;
+            width: 34%;
+            height: 330px;
+            left: 20px;
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+        }
 
-	}
+        #Pic3home {
+            border: 1px solid $BorderWhite;
+            top: 60vh;
+            width: 34%;
+            height: 330px;
+            left: 20px;
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+        }
 
-	#CloseBtn:hover{
-		transform: rotate(-90deg);
-	}
+        #CloseBtn {
+            width: 50px;
+            height: 50px;
+            margin-top: 5vh;
+            left: 85vw;
+            z-index: 3;
+            stroke: $Text1Color;
+            position: absolute;
+            margin-left: 5px;
+            cursor: pointer;
+            -moz-transition: linear 0.3s;
+            -ms-transition: linear 0.3s;
+            -o-transition: linear 0.3s;
+            -webkit-transition: linear 0.3s;
+            transition: linear 0.3s;
+        }
 
+        #CloseBtn:hover {
+            transform: rotate(-90deg);
+        }
+    }
 }
 
 .video1{
@@ -790,17 +801,20 @@ h1 {
     color: $Text1Color;
     padding-left: 20px;
 }
-
-
-
-		////////////////////////////////////////////////////////
-		////////// Contact Page  /////////////////////////////////
-
-
+#AboutContent {
+    margin-right: 50px;
+    padding-right: 5%;
+    float: right;
+    width: 90%;
+    height: 100%;
+    overflow-x: hidden;
+    user-select:none;
+}
+////////////////////////////////////////////////////////
+////////// Contact Page  /////////////////////////////////
 h1 {
-	color: $Text1Color;
-	padding-left: 20px;
-
+    color: $Text1Color;
+    padding-left: 20px;
 }
 
 

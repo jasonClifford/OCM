@@ -265,7 +265,8 @@ const Home = React.createClass({
           </svg>
 
           </a>
-          </div>
+             
+              </div>
           <AsideHome />
           <Video id="video1" autoPlay
               muted

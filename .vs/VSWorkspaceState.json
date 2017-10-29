@@ -1,14 +1,14 @@
 {
   "ExpandedNodes": [
     "",
-    "\\build",
     "\\Routs",
     "\\Routs\\Pages",
     "\\Routs\\Pages\\Home",
+    "\\Routs\\Pages\\Home\\Components",
     "\\Routs\\Pages\\Layout",
     "\\Routs\\Pages\\Layout\\Components",
     "\\src"
   ],
-  "SelectedNode": "\\Routs\\Layout.js",
+  "SelectedNode": "\\Routs\\Contact.js",
   "PreviewInSolutionExplorer": false
 }
