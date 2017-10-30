@@ -1,59 +1,18 @@
 import React from "react";
-import { browserHistory } from "react-router";
+import { Link } from "react-router";
 import AsideHome from "./Pages/Home/Components/AsideHome.js";
-import SimpleCube from "./Pages/Home/Components/SimpleCube.js";
-import { Motion, spring } from 'react-motion';
-import Video from 'react-html5video';
-
-const FlyInVid = 'https://s3.ca-central-1.amazonaws.com/ocmediavideo/Main.mp4';
-const InkVid = 'https://s3.ca-central-1.amazonaws.com/ocmediavideo/Ink.mp4';
-
-
+import Precip from "./Pages/Home/Components/Precip.js";
+import {Motion, spring} from 'react-motion';
 
 
 const Home = React.createClass({
-    handleTouchStart(e) {
-        e.preventDefault();
-    },
-    navaAbout() {
-        var Messanger = window.location.pathname;
 
-        if (Messanger === "/home") {
-            //set curent path to..
-            var Messanger = 1;
-        }
-        if (Messanger === "/about") {
-            //set curent path to..
-            var Messanger = 2;
-        }
-        if (Messanger === "/contact") {
-            //set curent path to..
-            var Messanger = 3;
-        }
-
-        browserHistory.push({
-            pathname: 'about',
-            state: { message: Messanger }
-        });
-        //console.log(Messanger);
-    },
-
-    navaAboutTouch(e) {
-        e.preventDefault();
-        this.navaAbout();
-    },
-
-    render() {
-
- 
+    render(){
       return (
         <div className="mainContainer">
 
-              <div className="LinkNext">
-                  <a
-                      onMouseDown={() => { this.navaAbout()}}
-                      onTouchStart={() => { this.navaAboutTouch}}
-                    >
+          <div className="LinkNext">
+            <Link to="about">
 
             <svg id="LinkDwnLgo" width="50px" height="50px" viewBox="0 0 50 50">
 
@@ -265,11 +224,12 @@ const Home = React.createClass({
           </g>
           </svg>
 
-          </a>
-             
-              </div>
-          <AsideHome />
-          <SimpleCube />
+          </Link>
+          </div>
+
+
+            <Precip />
+            <AsideHome />
 
 
       </div>
