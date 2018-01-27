@@ -47,7 +47,7 @@ class NeuroNetwork extends Component {
 
                    <meshBasicMaterial
                        wireframe={true}
-                        color={0x00ff00}
+                        color={0x00fff0}
                         
                         
                     />
