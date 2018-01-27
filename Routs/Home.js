@@ -1,7 +1,7 @@
 import React from "react";
 import { browserHistory } from "react-router";
 import AsideHome from "./Pages/Home/Components/AsideHome.js";
-import SimpleCube from "./Pages/Home/Components/SimpleCube.js";
+import NeuroNetwork from "./Pages/Home/Components/NeuroNetwork.js";
 import { Motion, spring } from 'react-motion';
 import Video from 'react-html5video';
 
@@ -269,7 +269,7 @@ const Home = React.createClass({
              
               </div>
           <AsideHome />
-          <SimpleCube />
+          <NeuroNetwork />
 
 
       </div>
