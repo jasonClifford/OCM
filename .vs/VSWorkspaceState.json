@@ -6,8 +6,9 @@
     "\\Routs\\Pages",
     "\\Routs\\Pages\\Home",
     "\\Routs\\Pages\\Home\\Components",
+    "\\Routs\\Pages\\Home\\Components\\assets",
     "\\src"
   ],
-  "SelectedNode": "\\Routs",
+  "SelectedNode": "\\Routs\\Pages\\Home\\Components\\NeuroNetwork.js",
   "PreviewInSolutionExplorer": false
 }
