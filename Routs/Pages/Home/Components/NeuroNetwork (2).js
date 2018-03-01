@@ -39,17 +39,17 @@ class NeuroNetwork extends Component {
                     ref="camRef"
                 />
                 <mesh>
-                  
-                   <boxGeometry
+
+                    <boxGeometry
                         width={1}
                         height={1}
                         depth={1} />
 
-                   <meshBasicMaterial
-                       wireframe={true}
+                    <meshBasicMaterial
+                        wireframe={true}
                         color={0x00fff0}
-                        
-                        
+
+
                     />
                 </mesh>
             </scene>

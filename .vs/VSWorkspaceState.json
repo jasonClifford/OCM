@@ -1,14 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\build",
     "\\Routs",
     "\\Routs\\Pages",
     "\\Routs\\Pages\\Home",
     "\\Routs\\Pages\\Home\\Components",
-    "\\Routs\\Pages\\Home\\Components\\assets",
-    "\\src"
+    "\\Routs\\Pages\\Home\\Components\\Model"
   ],
-  "SelectedNode": "\\Routs",
+  "SelectedNode": "\\Routs\\Pages\\Home\\Components\\Model\\grave.obj",
   "PreviewInSolutionExplorer": false
 }

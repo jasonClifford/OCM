@@ -3,10 +3,17 @@ import $ from 'jquery';
 import * as THREE from 'three';
 import PropTypes from 'prop-types';
 import React3 from 'react-three-renderer';
-var OrbitControls = require('three-orbit-controls')(THREE)
+import ObjectModel from 'react-three-renderer-objects';
+
+var OBJLoader = require('three-obj-loader')(THREE);
+
+var OrbitControls = require('three-orbit-controls')(THREE);
+//import exampleObject from "./Model/man.obj"
+
 
 
 class NeuroNetwork extends Component {
+
     constructor(props, context) {
         super(props, context);
         this.state = { controls: {} };
@@ -21,14 +28,25 @@ class NeuroNetwork extends Component {
     }
 
     componentDidMount() {
-        this.setState({ controls: this.GetControls(this.refs.camRef) })
+        this.setState({ controls: this.GetControls(this.refs.camRef) });
+
+       
+        
+        this.THREE = THREE;
+        const objLoader = new this.THREE.OBJLoader();
+        objLoader.load("./Model/man.obj", geometry => {
+            geometry.center();
+        })
     }
 
     render() {
+       
+        
+
         return (<React3
             mainCamera="camera"
-            width={1600} //{700} just designate a px value.  window.innerWidth
-            height={1600} //{700}                            window.innerHeight 
+            width={700} //{700} just designate a px value.  window.innerWidth
+            height={700} //{700}                            window.innerHeight 
             onAnimate={this.state.controls.update}
         >
             <scene>
@@ -62,3 +80,4 @@ export default NeuroNetwork;
 //https://github.com/benwinding/Test-react-three-renderer/blob/master/src/index.js
 
 //https://stackoverflow.com/questions/41248287/how-to-connect-threejs-to-react
+//https://github.com/shlomizadok/shalosh
